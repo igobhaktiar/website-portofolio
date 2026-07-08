@@ -52,7 +52,7 @@ export default function Showcase({ open, onClose }) {
       for (let i = 0; i < pages.length; i++) {
         const canvas = await html2canvas(pages[i], {
           scale: 2,
-          backgroundColor: '#FBF8F1',
+          backgroundColor: '#FFFFFF',
           useCORS: true,
           logging: false,
         });

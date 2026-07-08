@@ -1,15 +1,18 @@
 import { techBelt } from '../data/portfolio.js';
 
-/** Auto-scrolling marquee of technologies (list doubled for a seamless loop). */
+/** A clean, static "core stack" strip beneath the hero. */
 export default function TechBelt() {
-  const items = [...techBelt, ...techBelt];
-
   return (
-    <div className="belt" aria-label="Technologies">
-      <div className="belt-track">
-        {items.map((tech, i) => (
-          <span key={i}>{tech}</span>
-        ))}
+    <div className="stack-strip">
+      <div className="wrap">
+        <span className="stack-label">Core stack</span>
+        <div className="stack-tags">
+          {techBelt.map((t) => (
+            <span className="chip" key={t}>
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

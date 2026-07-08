@@ -3,7 +3,7 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <span>© 2026 Firgo Bhaktiar Hamsah — Mobile Engineer</span>
-        <span className="mono">Flutter · Kotlin · Built from scratch</span>
+        <span className="foot-links">Flutter · Kotlin · Built from scratch</span>
       </div>
     </footer>
   );

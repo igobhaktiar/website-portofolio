@@ -1,14 +1,13 @@
 import { navLinks, profile } from '../data/portfolio.js';
 
-/** Sticky, minimal top nav — brand mark, links, and a single CTA. */
+/** Clean sticky top nav — monogram brand, links, and a single CTA. */
 export default function StatusBar({ onOpenShowcase }) {
   return (
-    <header className="statusbar">
+    <header className="nav">
       <div className="wrap">
         <a className="brand" href="#top">
-          {profile.name.split(' ')[0]}
-          <span className="accent">.</span>
-          <span className="brand-role">{profile.role}</span>
+          <span className="brand-mark">{profile.name[0]}</span>
+          <span className="brand-name">{profile.name}</span>
         </a>
         <nav className="navlinks">
           {navLinks.map((link) =>
@@ -23,7 +22,7 @@ export default function StatusBar({ onOpenShowcase }) {
             )
           )}
         </nav>
-        <a className="btn btn-primary" href="#contact">
+        <a className="btn btn-primary nav-cta" href="#contact">
           Get in touch
         </a>
       </div>

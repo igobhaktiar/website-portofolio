@@ -52,7 +52,7 @@ export default function Showcase({ open, onClose }) {
       for (let i = 0; i < pages.length; i++) {
         const canvas = await html2canvas(pages[i], {
           scale: 2,
-          backgroundColor: '#0A0D1A',
+          backgroundColor: '#FBF8F1',
           useCORS: true,
           logging: false,
         });
@@ -159,7 +159,7 @@ export default function Showcase({ open, onClose }) {
               {project.screens.map((key) => {
                 const Screen = screens[key];
                 return (
-                  <Phone glow={false} key={key}>
+                  <Phone key={key}>
                     {Screen ? <Screen /> : null}
                   </Phone>
                 );

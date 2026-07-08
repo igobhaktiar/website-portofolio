@@ -1,17 +1,15 @@
-import { useClock } from '../hooks/useClock.js';
-import { navLinks } from '../data/portfolio.js';
+import { navLinks, profile } from '../data/portfolio.js';
 
-/** Sticky status-bar-styled navigation with a live clock and signal glyphs. */
+/** Sticky, minimal top nav — brand mark, links, and a single CTA. */
 export default function StatusBar({ onOpenShowcase }) {
-  const clock = useClock();
-
   return (
     <header className="statusbar">
       <div className="wrap">
-        <div className="clock">
-          <span className="dot" />
-          <span>{clock}</span>
-        </div>
+        <a className="brand" href="#top">
+          {profile.name.split(' ')[0]}
+          <span className="accent">.</span>
+          <span className="brand-role">{profile.role}</span>
+        </a>
         <nav className="navlinks">
           {navLinks.map((link) =>
             link.action === 'showcase' ? (
@@ -25,20 +23,9 @@ export default function StatusBar({ onOpenShowcase }) {
             )
           )}
         </nav>
-        <div className="signal">
-          <span className="bars">
-            <i />
-            <i />
-            <i />
-            <i />
-          </span>
-          <span className="battery">
-            <b />
-          </span>
-          <a className="btn btn-primary" href="#contact">
-            Get in touch
-          </a>
-        </div>
+        <a className="btn btn-primary" href="#contact">
+          Get in touch
+        </a>
       </div>
     </header>
   );

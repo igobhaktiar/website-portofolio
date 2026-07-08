@@ -101,45 +101,50 @@ export const projects = [
   },
 ];
 
-// Skill tiles. `sq` is the little badge label; `from`/`to` its gradient.
+// Skill tiles. Each group has one accent `tint` (not a rainbow per item) so
+// the grid reads as calm and organized; `sq` is the little badge label.
 export const skillGroups = [
   {
     title: 'Languages',
+    tint: '#2DD4E4',
     items: [
-      { sq: 'Dt', label: 'Dart', from: '#2DD4E4', to: '#1e88c9' },
-      { sq: 'Kt', label: 'Kotlin', from: '#7C5CFF', to: '#4b34c9' },
-      { sq: 'Jv', label: 'Java', from: '#FF7597', to: '#F0553B' },
-      { sq: 'C#', label: 'C#', from: '#B6F09C', to: '#5fbf5f' },
-      { sq: '{}', label: 'XML / JSON', from: '#FFC15E', to: '#f0a020' },
+      { sq: 'Dt', label: 'Dart' },
+      { sq: 'Kt', label: 'Kotlin' },
+      { sq: 'Jv', label: 'Java' },
+      { sq: 'C#', label: 'C#' },
+      { sq: '{}', label: 'XML / JSON' },
     ],
   },
   {
     title: 'Frameworks & Architecture',
+    tint: '#7C5CFF',
     items: [
-      { sq: 'Fl', label: 'Flutter', from: '#2DD4E4', to: '#1e88c9' },
-      { sq: 'BL', label: 'BLoC', from: '#7C5CFF', to: '#4b34c9' },
-      { sq: 'CA', label: 'Clean Architecture', from: '#B6F09C', to: '#5fbf5f' },
-      { sq: 'FB', label: 'Feature-Based', from: '#FFC15E', to: '#f0a020' },
-      { sq: 'SD', label: 'Android SDK', from: '#34D399', to: '#1f9d6b' },
+      { sq: 'Fl', label: 'Flutter' },
+      { sq: 'BL', label: 'BLoC' },
+      { sq: 'CA', label: 'Clean Architecture' },
+      { sq: 'FB', label: 'Feature-Based' },
+      { sq: 'SD', label: 'Android SDK' },
     ],
   },
   {
     title: 'Platforms',
+    tint: '#34D399',
     items: [
-      { sq: 'An', label: 'Android', from: '#B6F09C', to: '#5fbf5f' },
-      { sq: 'iO', label: 'iOS', from: '#8892b0', to: '#5a6280' },
-      { sq: 'TV', label: 'Android TV', from: '#7C5CFF', to: '#4b34c9' },
-      { sq: 'XP', label: 'Cross-platform', from: '#2DD4E4', to: '#1e88c9' },
+      { sq: 'An', label: 'Android' },
+      { sq: 'iO', label: 'iOS' },
+      { sq: 'TV', label: 'Android TV' },
+      { sq: 'XP', label: 'Cross-platform' },
     ],
   },
   {
     title: 'Craft & Delivery',
+    tint: '#FF7597',
     items: [
-      { sq: 'UX', label: 'UI/UX Design', from: '#FF7597', to: '#F0553B' },
-      { sq: 'Sv', label: 'SVG Optimization', from: '#FFC15E', to: '#f0a020' },
-      { sq: 'PA', label: 'Play Asset Delivery', from: '#34D399', to: '#1f9d6b' },
-      { sq: 'RE', label: 'REST APIs', from: '#7C5CFF', to: '#4b34c9' },
-      { sq: 'St', label: 'Play & App Store', from: '#2DD4E4', to: '#1e88c9' },
+      { sq: 'UX', label: 'UI/UX Design' },
+      { sq: 'Sv', label: 'SVG Optimization' },
+      { sq: 'PA', label: 'Play Asset Delivery' },
+      { sq: 'RE', label: 'REST APIs' },
+      { sq: 'St', label: 'Play & App Store' },
     ],
   },
 ];

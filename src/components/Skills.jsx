@@ -6,7 +6,7 @@ export default function Skills() {
     <section
       className="section"
       id="skills"
-      style={{ background: 'var(--ink-2)', borderBlock: '1px solid var(--line)' }}
+      style={{ background: 'var(--surface)', borderBlock: '1px solid var(--line)' }}
     >
       <div className="wrap">
         <Reveal className="section-head">
@@ -19,19 +19,16 @@ export default function Skills() {
         </Reveal>
 
         {skillGroups.map((group) => (
-          <Reveal className="skill-group" key={group.title}>
+          <Reveal
+            className="skill-group"
+            key={group.title}
+            style={{ '--tint': group.tint }}
+          >
             <h3>{group.title}</h3>
             <div className="icon-grid">
               {group.items.map((item) => (
                 <div className="icon-tile" key={item.label}>
-                  <span
-                    className="sq"
-                    style={{
-                      background: `linear-gradient(135deg,${item.from},${item.to})`,
-                    }}
-                  >
-                    {item.sq}
-                  </span>
+                  <span className="sq">{item.sq}</span>
                   <b>{item.label}</b>
                 </div>
               ))}

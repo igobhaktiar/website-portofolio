@@ -20,7 +20,7 @@ npm run preview  # preview the production build locally
 ```
 index.html                 Vite entry — loads fonts + mounts React
 public/                    Static assets (drop the résumé PDF here)
-legacy/portfolio.html      The original single-file version, kept for reference
+legacy/index.html          The original single-file version, kept for reference
 src/
 ├── main.jsx               React entry point
 ├── App.jsx                Page composition

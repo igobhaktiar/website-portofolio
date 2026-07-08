@@ -4,7 +4,7 @@ import { screens } from './screens/index.js';
 import { projects } from '../data/portfolio.js';
 
 function ProjectCard({ project }) {
-  const Screen = screens[project.screen];
+  const Screen = screens[project.screens[0]];
 
   return (
     <Reveal as="article" className="project">
@@ -36,7 +36,7 @@ function ProjectCard({ project }) {
   );
 }
 
-export default function Work() {
+export default function Work({ onOpenShowcase }) {
   return (
     <section className="section" id="work">
       <div className="wrap">
@@ -48,6 +48,9 @@ export default function Work() {
             post-launch maintenance — across Islamic apps, real estate, and
             agri-tech.
           </p>
+          <button type="button" className="btn btn-ghost work-showcase-btn" onClick={onOpenShowcase}>
+            View project showcase · Export PDF
+          </button>
         </Reveal>
         {/* Articles stay direct children of .wrap so the alternating
             :nth-child(even) device layout keeps working. */}

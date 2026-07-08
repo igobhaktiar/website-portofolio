@@ -20,6 +20,7 @@ export const navLinks = [
   { href: '#work', label: 'Work' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
+  { action: 'showcase', label: 'Showcase' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -35,11 +36,12 @@ export const techBelt = [
   'Java',
 ];
 
-// `screen` maps to a mock-UI component in components/screens.
+// `screens` is an ordered list of mock-UI keys from components/screens —
+// add more entries to show additional screenshots for a project.
 export const projects = [
   {
     id: 'altara',
-    screen: 'quran',
+    screens: ['quran'],
     index: '01 / Altara Inovation Group',
     title: "Al-Qur'an, Quran TV & Juz Amma for Kids",
     role: 'Mobile Engineer · Malang · Oct 2025–Present',
@@ -54,7 +56,7 @@ export const projects = [
   },
   {
     id: 'galaxy',
-    screen: 'property',
+    screens: ['property'],
     index: '02 / Galaxy Property',
     title: 'Galaxy Property — real estate app',
     role: 'Mobile Developer · Surabaya · Oct 2024–Present',
@@ -69,7 +71,7 @@ export const projects = [
   },
   {
     id: 'aliflammim',
-    screen: 'quranList',
+    screens: ['quranList'],
     index: '03 / Alif Lam Mim — Kuwait \u{1F1F0}\u{1F1FC}',
     title: "Qur'an app for an international team",
     role: 'Mobile Engineer · Remote · Feb 2025–Feb 2026',
@@ -84,7 +86,7 @@ export const projects = [
   },
   {
     id: 'pandawa',
-    screen: 'agri',
+    screens: ['agri'],
     index: '04 / Pandawa Agri Indonesia',
     title: 'Pandawa Agri — agri-tech app',
     role: 'Mobile Developer (Flutter) · Banyuwangi · Oct 2023–Oct 2024',

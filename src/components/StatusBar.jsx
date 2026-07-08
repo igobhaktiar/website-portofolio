@@ -2,7 +2,7 @@ import { useClock } from '../hooks/useClock.js';
 import { navLinks } from '../data/portfolio.js';
 
 /** Sticky status-bar-styled navigation with a live clock and signal glyphs. */
-export default function StatusBar() {
+export default function StatusBar({ onOpenShowcase }) {
   const clock = useClock();
 
   return (
@@ -13,11 +13,17 @@ export default function StatusBar() {
           <span>{clock}</span>
         </div>
         <nav className="navlinks">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href}>
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.action === 'showcase' ? (
+              <button key={link.label} type="button" className="navbtn" onClick={onOpenShowcase}>
+                {link.label}
+              </button>
+            ) : (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            )
+          )}
         </nav>
         <div className="signal">
           <span className="bars">

@@ -1,0 +1,60 @@
+import Reveal from './Reveal.jsx';
+import Phone from './Phone.jsx';
+import { screens } from './screens/index.js';
+import { projects } from '../data/portfolio.js';
+
+function ProjectCard({ project }) {
+  const Screen = screens[project.screen];
+
+  return (
+    <Reveal as="article" className="project">
+      <div className="project-device">
+        <Phone>{Screen ? <Screen /> : null}</Phone>
+      </div>
+      <div className="project-body">
+        <span className="p-index">{project.index}</span>
+        <h3>{project.title}</h3>
+        <div className="role">{project.role}</div>
+        <p>{project.description}</p>
+        <div className="tags">
+          {project.tags.map((tag) => (
+            <span className="tag" key={tag}>
+              {tag}
+            </span>
+          ))}
+        </div>
+        <div className="p-facts">
+          {project.facts.map((f) => (
+            <div className="m" key={f.label}>
+              <b>{f.value}</b>
+              <span>{f.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </Reveal>
+  );
+}
+
+export default function Work() {
+  return (
+    <section className="section" id="work">
+      <div className="wrap">
+        <Reveal className="section-head">
+          <span className="eyebrow">Selected work</span>
+          <h2>Apps I've shipped end-to-end.</h2>
+          <p>
+            From architecture and state management to store release and
+            post-launch maintenance — across Islamic apps, real estate, and
+            agri-tech.
+          </p>
+        </Reveal>
+        {/* Articles stay direct children of .wrap so the alternating
+            :nth-child(even) device layout keeps working. */}
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </section>
+  );
+}

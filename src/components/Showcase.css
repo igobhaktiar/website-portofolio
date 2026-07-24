@@ -75,6 +75,10 @@
 }
 /* Size phones small enough that several can sit side by side in the gallery. */
 .pdf-project .pj-gallery .phone{--w:170px}
+/* When a project shows many screenshots (e.g. Pandawa's 6), shrink them so
+   all fit within one PDF page without clipping. */
+.pdf-project .pj-gallery.many{gap:12px}
+.pdf-project .pj-gallery.many .phone{--w:120px}
 
 @media (max-width:840px){
   .showcase-doc{padding:20px 12px 0}

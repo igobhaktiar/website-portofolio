@@ -155,7 +155,7 @@ export default function Showcase({ open, onClose }) {
                 ))}
               </div>
             </div>
-            <div className="pj-gallery">
+            <div className={project.screens.length > 3 ? 'pj-gallery many' : 'pj-gallery'}>
               {project.screens.map((key) => {
                 const Screen = screens[key];
                 return (

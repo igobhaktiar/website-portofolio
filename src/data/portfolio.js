@@ -86,7 +86,14 @@ export const projects = [
   },
   {
     id: 'pandawa',
-    screens: ['agri'],
+    screens: [
+      'pandawaBeranda',
+      'pandawaTugas',
+      'pandawaKalender',
+      'pandawaPanen',
+      'pandawaTanam',
+      'pandawaLainnya',
+    ],
     index: '04 / Pandawa Agri Indonesia',
     title: 'Pandawa Agri — agri-tech app',
     role: 'Mobile Developer (Flutter) · Banyuwangi · Oct 2023–Oct 2024',
